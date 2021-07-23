@@ -15,9 +15,10 @@ class RandomQuestionsView(APIView):
 
         return Response(serializer.data)
 
-    def post(self, request, *args, **kwargs):
-        serializer = QuestionsSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors)
+    # Adicionar futuramente método POST para sugestões
+    # def post(self, request, *args, **kwargs):
+    #     serializer = QuestionsSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data)
+    #     return Response(serializer.errors)
